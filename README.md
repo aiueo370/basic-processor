@@ -2,6 +2,7 @@
 パイプライン構成はIF→ID→EX→WBステージです。
 
 実装されている命令は、ADD命令、SUB命令、AND命令、OR命令、LDI命令、BEQ命令、BLT命令です。
+詳しい命令については 仕様書.pdf をご覧ください。
 
 また、ファイルは以下の通りです。
   adder_8.v：8ビット加算器
@@ -14,7 +15,7 @@
   register_1.v：1ビットレジスタ
   register_4.v：4ビットレジスタ
   register_8.v：8ビットレジスタ
-  register_16.v：16ビットレジスタ
+  register_16.v：16ビットレジス
   selsctor_1.v：1セレクタ
   selsctor_2.v：2セレクタ
   selsctor_8.v：8セレクタ
@@ -23,5 +24,6 @@
   decode.v：IDステージ
   wb.v：WBステージ
   execution.v：EXステージ
-cpu.v：CPU
-i_rom：命令格納rom
+  cpu.v：CPU
+  i_rom：命令格納rom
+  
