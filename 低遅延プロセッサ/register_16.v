@@ -1,0 +1,18 @@
+`timescale 1ps/1ps
+
+//１６ビットレジスタ
+module register_16 (rst, clk, in, out);
+    input rst, clk;				//リセット・クロック
+    input [15:0] in;			//入力
+    output [15:0] out;			//出力
+    reg [15:0] out;
+    
+    always @ (negedge rst or posedge clk) begin
+        if(!rst)begin      		// rst=1でリセット
+            out <= #1 16'b0;
+        end
+        else begin             	// rst=0で通常動作
+            out <=#1 in;
+        end
+    end
+endmodule
